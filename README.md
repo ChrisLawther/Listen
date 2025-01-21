@@ -2,9 +2,21 @@
 
 _**Heavily**_ influenced by [`hear`][1] by Sveinbjorn Thordarson, but written in Swift, using ArgumentParser and packaged by SPM.
 
+## Build
+
+Debug build:
+
+    swift build
+    
+Release build
+
+    swift build -c release
+    
+Executable is written to `.build/{debug,release}/listen`
+
 ## Example usage
 
-Transcribe audio from the microphone, on-device (`-d`), over-writing a single line ('-m'), inserting punctuation (`-p`) and exiting when a phrase ends with the word "exit" (`-x exit`).
+Transcribe audio from the microphone, on-device (`-d`), over-writing a single line (`-m`), inserting punctuation (`-p`) and exiting when a phrase ends with the word "exit" (`-x exit`).
 
     listen -d -m -p -x exit
    
