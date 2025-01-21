@@ -4,7 +4,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "hear",
+    name: "listen",
     platforms: [
         .macOS(.v15)
     ],
@@ -14,16 +14,16 @@ let package = Package(
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
-        .target(name: "libhear"),
+        .target(name: "libListen"),
         .testTarget(
-            name: "libhearTests",
+            name: "libListenTests",
             dependencies: [
-                "libhear"
+                "libListen"
             ]),
         .executableTarget(
-            name: "hear",
+            name: "listen",
             dependencies: [
-                "libhear",
+                "libListen",
                 .product(name: "ArgumentParser", package: "swift-argument-parser")
             ]),
     ]
