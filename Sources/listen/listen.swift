@@ -31,13 +31,13 @@ struct ListenApp: AsyncParsableCommand {
     @Flag(name: .shortAndLong, help: "Only use on-device speech recognition")
     var device: Bool = false
 
-    @Flag(name: [.customShort("m"), .long], help: "Single line mode (mic only)")
+    @Flag(name: [.customShort("m"), .customLong("single")], help: "Single line mode (mic only)")
     var singleLineMode: Bool = false
 
     @Flag(name: .shortAndLong, help: "Add punctuation to speech recognition results (macOS 13+)")
     var punctuation: Bool = false
 
-    @Option(name: [.customShort("x"), .long], help: "Set exit word that causes program to quit")
+    @Option(name: [.customShort("x"), .customLong("exit")], help: "Set exit word that causes program to quit")
     var exitWord: String?
 
     @Option(name: .shortAndLong, help: "Specify audio file to process")
